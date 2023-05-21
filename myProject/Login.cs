@@ -147,6 +147,9 @@ namespace myProject
         }
         void Movetocustomer()
         {
+            userMain f = new userMain();
+            f.Show();
+            Program.fixedLogin.Hide();
             /*Move me to customer PAge Plaeade*/
         }
     }
