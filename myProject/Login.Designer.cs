@@ -158,6 +158,7 @@
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(panel1);
+            MinimumSize = new Size(1918, 1078);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

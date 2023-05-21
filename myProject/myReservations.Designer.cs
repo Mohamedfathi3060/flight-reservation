@@ -52,9 +52,9 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Simple Indust Outline", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Teal;
-            label1.Location = new Point(295, 9);
+            label1.Location = new Point(337, 12);
             label1.Name = "label1";
-            label1.Size = new Size(486, 50);
+            label1.Size = new Size(601, 62);
             label1.TabIndex = 17;
             label1.Text = "Reservation Flight System";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -63,10 +63,9 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(10, 14);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(11, 19);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(109, 46);
+            pictureBox1.Size = new Size(125, 61);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -79,9 +78,8 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(162, 479);
+            panel1.Size = new Size(185, 696);
             panel1.TabIndex = 16;
             // 
             // flightsbt
@@ -89,9 +87,10 @@
             flightsbt.BackColor = Color.Transparent;
             flightsbt.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             flightsbt.ForeColor = Color.Teal;
-            flightsbt.Location = new Point(7, 235);
+            flightsbt.Location = new Point(8, 313);
+            flightsbt.Margin = new Padding(3, 4, 3, 4);
             flightsbt.Name = "flightsbt";
-            flightsbt.Size = new Size(147, 55);
+            flightsbt.Size = new Size(168, 73);
             flightsbt.TabIndex = 45;
             flightsbt.Text = "Flights";
             flightsbt.UseVisualStyleBackColor = false;
@@ -102,9 +101,10 @@
             bookbt.BackColor = Color.Transparent;
             bookbt.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bookbt.ForeColor = Color.Teal;
-            bookbt.Location = new Point(7, 154);
+            bookbt.Location = new Point(8, 205);
+            bookbt.Margin = new Padding(3, 4, 3, 4);
             bookbt.Name = "bookbt";
-            bookbt.Size = new Size(147, 55);
+            bookbt.Size = new Size(168, 73);
             bookbt.TabIndex = 44;
             bookbt.Text = "Book Ticket";
             bookbt.UseVisualStyleBackColor = false;
@@ -112,10 +112,9 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(203, 143);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.Location = new Point(232, 191);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(145, 23);
+            textBox1.Size = new Size(165, 27);
             textBox1.TabIndex = 35;
             // 
             // label5
@@ -123,9 +122,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Simple Outline Pat", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.Teal;
-            label5.Location = new Point(203, 117);
+            label5.Location = new Point(232, 156);
             label5.Name = "label5";
-            label5.Size = new Size(91, 26);
+            label5.Size = new Size(115, 33);
             label5.TabIndex = 36;
             label5.Text = "Flight ID";
             // 
@@ -134,19 +133,18 @@
             label4.AutoSize = true;
             label4.Font = new Font("Simple Outline Pat", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.Teal;
-            label4.Location = new Point(203, 178);
+            label4.Location = new Point(232, 237);
             label4.Name = "label4";
-            label4.Size = new Size(87, 26);
+            label4.Size = new Size(109, 33);
             label4.TabIndex = 34;
             label4.Text = "Book ID";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(203, 204);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
+            textBox2.Location = new Point(232, 272);
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(145, 23);
+            textBox2.Size = new Size(165, 27);
             textBox2.TabIndex = 33;
             // 
             // button2
@@ -156,9 +154,10 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.MintCream;
-            button2.Location = new Point(208, 251);
+            button2.Location = new Point(238, 335);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(130, 39);
+            button2.Size = new Size(149, 52);
             button2.TabIndex = 42;
             button2.Text = "Cancle";
             button2.UseVisualStyleBackColor = false;
@@ -183,25 +182,24 @@
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.Location = new Point(390, 61);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Location = new Point(446, 81);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 100;
             dataGridView1.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridView1.RowTemplate.Height = 70;
-            dataGridView1.Size = new Size(491, 407);
+            dataGridView1.Size = new Size(561, 543);
             dataGridView1.TabIndex = 41;
             dataGridView1.CellFormatting += dataGridView1_CellFormatting;
             dataGridView1.CellPainting += dataGridView1_CellPainting;
             // 
             // myReservations
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(893, 479);
+            ClientSize = new Size(1434, 696);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(textBox1);
@@ -209,8 +207,10 @@
             Controls.Add(label4);
             Controls.Add(textBox2);
             Controls.Add(label1);
+            MinimumSize = new Size(1918, 1078);
             Controls.Add(panel1);
             ForeColor = Color.Cornsilk;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "myReservations";
             Text = "My Reservations";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

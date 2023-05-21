@@ -302,6 +302,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(887, 488);
+            MinimumSize = new Size(1918, 1078);
             Controls.Add(flightidinput);
             Controls.Add(label9);
             Controls.Add(button1);

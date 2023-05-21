@@ -258,6 +258,9 @@
             // 
             // Register
             // 
+
+
+            MinimumSize = new Size(1918, 1078);
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;

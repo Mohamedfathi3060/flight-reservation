@@ -23,7 +23,12 @@ namespace myProject
         public void loadToDataTable()
         {
 
-            SqlDataAdapter ad = Functions.makeQuery("select bookID,fligtID from reservation where (UserName = " + "'" + Program.primKey + "'" + ")");
+            SqlDataAdapter ad = Functions.makeQuery
+                ("select r.bookID , passenger.firstName + ' ' + passenger.lastName as [Full Name], f.fligtID,f.Dates,f.Sources,f.Destination,f.class   " +
+                "from flight as f inner join reservation as r on r.fligtID = f.fligtID" +
+                " inner join passenger on passenger.passportnumber = r.passportnumber  "
+                + "where (UserName = " + "'" + Program.primKey + "'" + ")");
+
             dt.Clear();
             ad.Fill(dt);/*must to overwrite the data in our dt*/
             dataGridView1.DataSource = new DataTable();

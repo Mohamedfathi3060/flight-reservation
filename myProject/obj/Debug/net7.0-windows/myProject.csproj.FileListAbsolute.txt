@@ -25,3 +25,6 @@ M:\c# library\flight-reservation\myProject\obj\Debug\net7.0-windows\refint\myPro
 M:\c# library\flight-reservation\myProject\obj\Debug\net7.0-windows\myProject.pdb
 M:\c# library\flight-reservation\myProject\obj\Debug\net7.0-windows\myProject.genruntimeconfig.cache
 M:\c# library\flight-reservation\myProject\obj\Debug\net7.0-windows\ref\myProject.dll
+M:\c# library\flight-reservation\myProject\obj\Debug\net7.0-windows\myProject.Book.resources
+M:\c# library\flight-reservation\myProject\obj\Debug\net7.0-windows\myProject.myReservations.resources
+M:\c# library\flight-reservation\myProject\obj\Debug\net7.0-windows\myProject.userMain.resources
