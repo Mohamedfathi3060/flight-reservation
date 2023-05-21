@@ -33,23 +33,24 @@
             btlogin = new Button();
             label4 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            textBoxpass = new TextBox();
+            textBoxusername = new TextBox();
             label1 = new Label();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             label5 = new Label();
-            textBox3 = new TextBox();
+            textBoxfname = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            textBoxlname = new TextBox();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
-            numericUpDown1 = new NumericUpDown();
+            textage = new NumericUpDown();
             label6 = new Label();
             label7 = new Label();
+            label8 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textage).BeginInit();
             SuspendLayout();
             // 
             // linkLabel1
@@ -79,6 +80,7 @@
             btlogin.TabIndex = 16;
             btlogin.Text = "Register";
             btlogin.UseVisualStyleBackColor = true;
+            btlogin.Click += btlogin_Click;
             // 
             // label4
             // 
@@ -102,20 +104,20 @@
             label2.TabIndex = 14;
             label2.Text = "User Name";
             // 
-            // textBox2
+            // textBoxpass
             // 
-            textBox2.Location = new Point(521, 470);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(310, 27);
-            textBox2.TabIndex = 13;
+            textBoxpass.Location = new Point(521, 470);
+            textBoxpass.Name = "textBoxpass";
+            textBoxpass.PasswordChar = '*';
+            textBoxpass.Size = new Size(310, 27);
+            textBoxpass.TabIndex = 13;
             // 
-            // textBox1
+            // textBoxusername
             // 
-            textBox1.Location = new Point(521, 382);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(310, 27);
-            textBox1.TabIndex = 12;
+            textBoxusername.Location = new Point(521, 382);
+            textBoxusername.Name = "textBoxusername";
+            textBoxusername.Size = new Size(310, 27);
+            textBoxusername.TabIndex = 12;
             // 
             // label1
             // 
@@ -163,12 +165,12 @@
             label5.TabIndex = 19;
             label5.Text = "First Name";
             // 
-            // textBox3
+            // textBoxfname
             // 
-            textBox3.Location = new Point(521, 182);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(310, 27);
-            textBox3.TabIndex = 18;
+            textBoxfname.Location = new Point(521, 182);
+            textBoxfname.Name = "textBoxfname";
+            textBoxfname.Size = new Size(310, 27);
+            textBoxfname.TabIndex = 18;
             // 
             // label3
             // 
@@ -181,12 +183,12 @@
             label3.TabIndex = 21;
             label3.Text = "Last Name";
             // 
-            // textBox4
+            // textBoxlname
             // 
-            textBox4.Location = new Point(521, 278);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(310, 27);
-            textBox4.TabIndex = 20;
+            textBoxlname.Location = new Point(521, 278);
+            textBoxlname.Name = "textBoxlname";
+            textBoxlname.Size = new Size(310, 27);
+            textBoxlname.TabIndex = 20;
             // 
             // radioButton1
             // 
@@ -210,15 +212,15 @@
             radioButton2.Text = "Female";
             radioButton2.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // textage
             // 
-            numericUpDown1.Location = new Point(604, 525);
-            numericUpDown1.Maximum = new decimal(new int[] { 90, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 18, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(150, 27);
-            numericUpDown1.TabIndex = 24;
-            numericUpDown1.Value = new decimal(new int[] { 18, 0, 0, 0 });
+            textage.Location = new Point(604, 525);
+            textage.Maximum = new decimal(new int[] { 90, 0, 0, 0 });
+            textage.Minimum = new decimal(new int[] { 18, 0, 0, 0 });
+            textage.Name = "textage";
+            textage.Size = new Size(150, 27);
+            textage.TabIndex = 24;
+            textage.Value = new decimal(new int[] { 18, 0, 0, 0 });
             // 
             // label6
             // 
@@ -243,27 +245,39 @@
             label7.TabIndex = 26;
             label7.Text = "Gender";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Simple Outline Pat", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.Teal;
+            label8.Location = new Point(665, 357);
+            label8.Name = "label8";
+            label8.Size = new Size(155, 22);
+            label8.TabIndex = 27;
+            label8.Text = "or SSN for Admins";
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1286, 824);
+            Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(textBox3);
-            Controls.Add(numericUpDown1);
+            Controls.Add(textBoxfname);
+            Controls.Add(textage);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(label3);
-            Controls.Add(textBox4);
+            Controls.Add(textBoxlname);
             Controls.Add(label5);
             Controls.Add(linkLabel1);
             Controls.Add(btlogin);
             Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxpass);
+            Controls.Add(textBoxusername);
             Controls.Add(label1);
             Controls.Add(panel1);
             Name = "Register";
@@ -271,7 +285,7 @@
             Load += register_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -282,19 +296,20 @@
         private Button btlogin;
         private Label label4;
         private Label label2;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox textBoxpass;
+        private TextBox textBoxusername;
         private Label label1;
         private Panel panel1;
         private PictureBox pictureBox1;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox textBoxfname;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox textBoxlname;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown textage;
         private Label label6;
         private Label label7;
+        private Label label8;
     }
 }
