@@ -49,16 +49,16 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(185, 687);
+            panel1.Size = new Size(185, 981);
             panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 19);
+            pictureBox1.Location = new Point(12, 34);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(125, 62);
+            pictureBox1.Size = new Size(147, 109);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -68,18 +68,18 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.White;
-            label1.Font = new Font("Simple Indust Outline", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Teal;
-            label1.Location = new Point(279, 19);
+            label1.Location = new Point(417, 34);
             label1.Name = "label1";
-            label1.Size = new Size(601, 62);
+            label1.Size = new Size(439, 39);
             label1.TabIndex = 1;
             label1.Text = "Reservation Flight System";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(417, 200);
+            textBox1.Location = new Point(417, 201);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(331, 27);
             textBox1.TabIndex = 2;
@@ -88,17 +88,18 @@
             // 
             textBox2.Location = new Point(417, 288);
             textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '●';
             textBox2.Size = new Size(331, 27);
             textBox2.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Simple Outline Pat", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Teal;
             label2.Location = new Point(417, 164);
             label2.Name = "label2";
-            label2.Size = new Size(150, 33);
+            label2.Size = new Size(119, 25);
             label2.TabIndex = 4;
             label2.Text = "User Name";
             label2.Click += label2_Click;
@@ -106,11 +107,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Simple Outline Pat", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.Teal;
             label4.Location = new Point(417, 252);
             label4.Name = "label4";
-            label4.Size = new Size(134, 33);
+            label4.Size = new Size(106, 25);
             label4.TabIndex = 6;
             label4.Text = "Password";
             label4.Click += label4_Click;
@@ -120,7 +121,7 @@
             btlogin.FlatAppearance.BorderColor = Color.Teal;
             btlogin.FlatAppearance.MouseOverBackColor = Color.PaleTurquoise;
             btlogin.FlatStyle = FlatStyle.Flat;
-            btlogin.Font = new Font("Simple Outline Pat", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btlogin.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btlogin.ForeColor = Color.Teal;
             btlogin.Location = new Point(497, 340);
             btlogin.Name = "btlogin";
@@ -149,7 +150,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(955, 687);
+            ClientSize = new Size(1900, 981);
             Controls.Add(linkLabel1);
             Controls.Add(btlogin);
             Controls.Add(label4);
@@ -158,7 +159,7 @@
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(panel1);
-            MinimumSize = new Size(1918, 1078);
+            MinimumSize = new Size(1918, 1028);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

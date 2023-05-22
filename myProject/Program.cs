@@ -20,13 +20,10 @@ namespace myProject
             Application.EnableVisualStyles();
             Functions.connectToDatabase();
             Application.Run(fixedLogin);
-
         }
 
         public static Form fixedLogin = new Login();
-
-       
-            static public string primKey = "20210348";
+        static public string primKey;
         static public string? pass;
         //static public string fname;
         //static public string lname;

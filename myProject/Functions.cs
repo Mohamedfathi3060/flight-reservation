@@ -14,7 +14,7 @@ namespace myProject
 
         static public void connectToDatabase()
         {
-            const string connString = "Data Source = GAGO; Initial Catalog=Flight; Integrated Security=true";
+            const string connString = "Data Source = DESKTOP-QI282G3; Initial Catalog=Flight; Integrated Security=true";
             conn  = new SqlConnection(connString);
             conn.Open();            
 

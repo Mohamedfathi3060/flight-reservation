@@ -57,5 +57,11 @@ namespace myProject
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.fixedLogin.Show();
+        }
     }
 }

@@ -21,15 +21,15 @@ namespace myProject
 
         {
             string query = "select SSN , Passwords from admins ";
-            SqlDataAdapter adapter =  Functions.makeQuery(query);
+            SqlDataAdapter adapter = Functions.makeQuery(query);
 
             string secquery = "select UserName , Passwords from customer ";
             SqlDataAdapter secadapter = Functions.makeQuery(secquery);
-            loadFromReader(adapter,secadapter);
+            loadFromReader(adapter, secadapter);
 
             InitializeComponent();
         }
-        void loadFromReader(SqlDataAdapter adminmadapter , SqlDataAdapter cusadapter)
+        void loadFromReader(SqlDataAdapter adminmadapter, SqlDataAdapter cusadapter)
         {
 
             adminmadapter.Fill(admindt);
@@ -56,16 +56,17 @@ namespace myProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "" || textBox1.Text == ""){
-                MessageBox.Show("empty form" ,"Error meaasge",MessageBoxButtons.OK);
+            if (textBox2.Text == "" || textBox1.Text == "")
+            {
+                MessageBox.Show("empty form", "Error meaasge", MessageBoxButtons.OK);
             }
-            else if ( searchinadmins(textBox1.Text , textBox2.Text) )
+            else if (searchinadmins(textBox1.Text, textBox2.Text))
             {
                 /*  >>>>>>>>>>>>> I Am ADMIN <<<<<<<<<<<<<<<<  */
-              DialogResult x =  MessageBox.Show("succsefully logined as Admin..!" , "" , MessageBoxButtons.OKCancel);
+                DialogResult x = MessageBox.Show("succsefully logined as Admin..!", "", MessageBoxButtons.OKCancel);
 
 
-                if (x== DialogResult.OK)
+                if (x == DialogResult.OK)
                 {
                     Program.primKey = textBox1.Text;
                     Program.pass = textBox2.Text;
@@ -93,13 +94,15 @@ namespace myProject
             }
             else
             {
-                MessageBox.Show("Wrong user name or Password","",MessageBoxButtons.RetryCancel);
+                MessageBox.Show("Wrong user name or Password", "", MessageBoxButtons.RetryCancel);
             }
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
-        static public bool searchinadmins(string ssn , string pass)
+        static public bool searchinadmins(string ssn, string pass)
         {
 
-            foreach(DataRow row in admindt.Rows)
+            foreach (DataRow row in admindt.Rows)
             {
                 if (row[0].ToString() == ssn && row[1].ToString() == pass)
                 {

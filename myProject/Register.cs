@@ -63,7 +63,7 @@ namespace myProject
                     "' , '" +
                     textage.Text +
                     "' , '" +
-                    (radioButton1.Checked == true? "Male":"Female")+
+                    (radioButton1.Checked == true ? "Male" : "Female") +
                     "' , '" +
                     textBoxpass.Text.ToString() +
                     "' , '" +
@@ -73,15 +73,17 @@ namespace myProject
                     "' )");
 
                 /*update the dt*/
-                MessageBox.Show("i have already insert this flight");
+                MessageBox.Show("i have already insert this user");
 
                 // will be updates automaticly
             }
-            else 
+            else
             {
                 MessageBox.Show("this username is taken before..!");
 
             }
+            this.Close();
+            Program.fixedLogin.Show();
         }
         public void insert(string query)
         {
@@ -94,11 +96,16 @@ namespace myProject
             string secquery = "select UserName , Passwords from customer ";
             SqlDataAdapter secadapter = Functions.makeQuery(secquery);
 
-            
+
             adapter.Fill(Login.admindt);
             secadapter.Fill(Login.customerdt);
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.fixedLogin.Show();
+        }
     }
 }

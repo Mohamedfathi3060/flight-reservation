@@ -35,11 +35,11 @@ namespace myProject
             dataGridView1.DataSource = dt;
         }
 
-        public bool searchFlightID()
+        public bool searchFlightID(string xx)
         {
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                if (dt.Rows[i][1].ToString() == textBox1.Text)
+                if (dt.Rows[i][1].ToString() == xx)
                 {
                     return true;
                 }
@@ -47,11 +47,11 @@ namespace myProject
             return false;
         }
 
-        public bool searchBookID()
+        public bool searchBookID(string x)
         {
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                if (dt.Rows[i][0].ToString() == textBox2.Text)
+                if (dt.Rows[i][0].ToString() == x)
                 {
                     return true;
                 }
@@ -65,7 +65,7 @@ namespace myProject
                 MessageBox.Show("Please fill in all the fields");
             else
             {
-                if (searchFlightID() == true && searchBookID() == true)
+                if (searchFlightID(textBox1.Text.ToString()) == true && searchBookID(textBox2.Text.ToString()) == true)
                 {
                     DialogResult Value = MessageBox.Show("Are You Sure You Want to Cancel Your Reservation?", "Cancel Reservation", MessageBoxButtons.YesNo);
                     if (Value == DialogResult.Yes)
@@ -92,6 +92,22 @@ namespace myProject
             this.Close();
             userMain userMain = new userMain();
             userMain.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.fixedLogin.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
