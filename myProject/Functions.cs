@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -12,14 +13,37 @@ namespace myProject
         static public SqlConnection? conn;
         static public SqlDataReader? reader;
 
-        static public void connectToDatabase()
+        static public MySqlConnection? Myconn;
+
+
+        //static public void connectToDatabase()
+        //{
+        //    const string connString = "Data Source = GAGO; Initial Catalog=Flight; Integrated Security=true";
+        //    conn  = new SqlConnection(connString);
+        //    conn.Open();            
+
+        //}
+        static public void connect()
         {
-            const string connString = "Data Source = DESKTOP-QI282G3; Initial Catalog=Flight; Integrated Security=true";
-            conn  = new SqlConnection(connString);
-            conn.Open();            
+            string server = "sql7.freesqldatabase.com";
+            string database = "sql7620169";
+            string username = "sql7620169";
+            string password = "pEfhUzwEeF";
+            string connetionString = "server=" + server + ";database=" + database + ";uid=" + username + ";pwd=" + password + ";";
+            Myconn = new MySqlConnection(connetionString);
+            try
+            {
+                Myconn.Open();
+                MessageBox.Show("Connection Open ! ");
+                Myconn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection ! " + ex.Message.ToString());
+            }
 
         }
-        
+
         static public SqlDataAdapter makeQuery(string query)
         {
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -28,7 +52,14 @@ namespace myProject
 
         }
 
-       
+        static public void MymakeQuery(string query)
+        {
+            MySqlCommand cmd = new MySqlCommand(query, Myconn);
+            cmd.ExecuteNonQuery();
+
+        }
+
+
 
 
     }

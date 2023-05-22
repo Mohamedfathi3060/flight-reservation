@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Book));
-            label1 = new Label();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             reservationbt = new Button();
@@ -51,23 +50,11 @@
             flightidinput = new TextBox();
             label9 = new Label();
             button2 = new Button();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ageinput).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Teal;
-            label1.Location = new Point(299, 32);
-            label1.Name = "label1";
-            label1.Size = new Size(439, 39);
-            label1.TabIndex = 15;
-            label1.Text = "Reservation Flight System";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -293,7 +280,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(1144, 25);
+            button2.Location = new Point(1190, 58);
             button2.Name = "button2";
             button2.Size = new Size(151, 46);
             button2.TabIndex = 59;
@@ -301,12 +288,26 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Bahnschrift Condensed", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Teal;
+            label1.Location = new Point(419, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(551, 72);
+            label1.TabIndex = 83;
+            label1.Text = "Reservation Flight System";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Book
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1902, 1033);
+            Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(flightidinput);
             Controls.Add(label9);
@@ -324,7 +325,6 @@
             Controls.Add(label8);
             Controls.Add(ssninput);
             Controls.Add(portinput);
-            Controls.Add(label1);
             Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             MinimumSize = new Size(1918, 1028);
@@ -339,8 +339,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Panel panel1;
         private Label label7;
         private Label label6;
@@ -362,5 +360,6 @@
         private Label label9;
         private PictureBox pictureBox1;
         private Button button2;
+        private Label label1;
     }
 }

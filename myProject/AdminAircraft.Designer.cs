@@ -33,8 +33,8 @@ namespace myProject
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminAircraft));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             update = new Button();
-            label1 = new Label();
             panel1 = new Panel();
+            button3 = new Button();
             Flights = new Button();
             pictureBox1 = new PictureBox();
             label7 = new Label();
@@ -48,6 +48,7 @@ namespace myProject
             textBoxKind = new TextBox();
             button1 = new Button();
             button2 = new Button();
+            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -66,23 +67,10 @@ namespace myProject
             update.UseVisualStyleBackColor = false;
             update.Click += update_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Teal;
-            label1.Location = new Point(225, 87);
-            label1.Name = "label1";
-            label1.Size = new Size(439, 39);
-            label1.TabIndex = 45;
-            label1.Text = "Reservation Flight System";
-            label1.TextAlign = ContentAlignment.TopRight;
-            label1.Click += label1_Click;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.Teal;
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(Flights);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
@@ -90,6 +78,21 @@ namespace myProject
             panel1.Name = "panel1";
             panel1.Size = new Size(185, 1033);
             panel1.TabIndex = 44;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.White;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.Teal;
+            button3.Location = new Point(24, 315);
+            button3.Name = "button3";
+            button3.Size = new Size(127, 42);
+            button3.TabIndex = 59;
+            button3.Text = "Stats";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // Flights
             // 
@@ -252,16 +255,29 @@ namespace myProject
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.White;
+            label3.Font = new Font("Bahnschrift Condensed", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.Teal;
+            label3.Location = new Point(509, 49);
+            label3.Name = "label3";
+            label3.Size = new Size(551, 72);
+            label3.TabIndex = 83;
+            label3.Text = "Reservation Flight System";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // AdminAircraft
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1902, 1033);
+            Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(update);
-            Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(label7);
             Controls.Add(textBoxSize);
@@ -288,7 +304,6 @@ namespace myProject
         #endregion
 
         private Button update;
-        private Label label1;
         private Panel panel1;
         private PictureBox pictureBox1;
         private Label label7;
@@ -344,6 +359,8 @@ namespace myProject
         private Button button1;
         private Button Flights;
         private Button button2;
+        private Button button3;
+        private Label label3;
     }
 
 }

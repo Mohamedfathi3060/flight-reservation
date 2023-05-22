@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
             panel1 = new Panel();
+            button3 = new Button();
             aircraft = new Button();
             pictureBox1 = new PictureBox();
             label6 = new Label();
@@ -71,6 +72,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Teal;
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(aircraft);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
@@ -78,6 +80,21 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(185, 1033);
             panel1.TabIndex = 10;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.White;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.Teal;
+            button3.Location = new Point(26, 367);
+            button3.Name = "button3";
+            button3.Size = new Size(138, 49);
+            button3.TabIndex = 5;
+            button3.Text = "Stats";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // aircraft
             // 
@@ -391,6 +408,7 @@
         private Button update;
         private Button aircraft;
         private Button button2;
+        private Button button3;
     }
 }
 

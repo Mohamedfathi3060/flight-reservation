@@ -23,6 +23,8 @@ namespace myProject
         public void loadToDataTable()
         {
 
+            
+
             SqlDataAdapter ad = Functions.makeQuery
                 ("select r.bookID , passenger.firstName + ' ' + passenger.lastName as [Full Name], f.fligtID,f.Dates,f.Sources,f.Destination,f.class   " +
                 "from flight as f inner join reservation as r on r.fligtID = f.fligtID" +
@@ -39,7 +41,7 @@ namespace myProject
         {
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                if (dt.Rows[i][1].ToString() == xx)
+                if (dt.Rows[i][2].ToString() == xx)
                 {
                     return true;
                 }
@@ -62,10 +64,12 @@ namespace myProject
         private void button2_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "" || textBox2.Text == "")
+            {
                 MessageBox.Show("Please fill in all the fields");
+            }
             else
             {
-                if (searchFlightID(textBox1.Text.ToString()) == true && searchBookID(textBox2.Text.ToString()) == true)
+                if (searchFlightID(textBox1.Text.ToString()) && searchBookID(textBox2.Text.ToString()))
                 {
                     DialogResult Value = MessageBox.Show("Are You Sure You Want to Cancel Your Reservation?", "Cancel Reservation", MessageBoxButtons.YesNo);
                     if (Value == DialogResult.Yes)
@@ -97,6 +101,7 @@ namespace myProject
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            Program.primKey = "";
             Program.fixedLogin.Show();
         }
 

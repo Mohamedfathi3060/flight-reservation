@@ -143,11 +143,11 @@ namespace myProject
             {
                 if (row[0].ToString() == givenId)
                 {
-                    MessageBox.Show("i found this id");
+                    MessageBox.Show("i found this flight id ");
                     return false;
                 }
             }
-            MessageBox.Show("i dont found this id");
+            MessageBox.Show("i didn't find this flight id");
 
             return true;
 
@@ -210,6 +210,13 @@ namespace myProject
         {
             this.Close();
             Program.fixedLogin.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            stats s = new stats();
+            this.Close();
+            s.Show();
         }
     }
 }

@@ -49,11 +49,11 @@ namespace myProject
             {
                 if (row[0].ToString() == givenId)
                 {
-                    MessageBox.Show("i found this id");
+                    MessageBox.Show("i found this Aircraft id");
                     return false;
                 }
             }
-            MessageBox.Show("i dont found this id");
+            MessageBox.Show("i dont found this Aircraft id");
 
             return true;
 
@@ -73,20 +73,9 @@ namespace myProject
             }
             return true;
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void AdminAircraft_Load(object sender, EventArgs e)
         {
@@ -103,10 +92,7 @@ namespace myProject
         }
 
 
-        private void add_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void label5_Click_1(object sender, EventArgs e)
         {
@@ -248,6 +234,13 @@ namespace myProject
             textBoxSeats.Text = "";
             textBoxSize.Text = "";
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            stats x = new stats();
+            this.Close();
+            x.Show();
         }
     }
 }

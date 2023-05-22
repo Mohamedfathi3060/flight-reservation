@@ -67,6 +67,7 @@ namespace myProject
             {
                 if (checkPassengerPassportnumber(portinput.Text))
                 {
+                    /* never book before*/
                     SqlDataAdapter id = Functions.makeQuery("select count(bookID) from reservation");
                     int bookID = (int)id.SelectCommand.ExecuteScalar() + 1;
                     Functions.makeQuery("insert into passenger values (" + "'" + portinput.Text + "'" + "," + "'" + ssninput.Text + "'" + "," + "'" + ((maleinput.Checked == true) ? "male" : "female") + "'" + "," + "'" + ageinput.Value + "'" + "," + "'" + firstinput.Text + "'" + "," + "'" + lastinput.Text + "'" + ")");
@@ -77,8 +78,10 @@ namespace myProject
                 }
                 else
                 {
+                    /*  booked before*/
                     if (checkflightid(portinput.Text, flightidinput.Text))
                     {
+
                         SqlDataAdapter id = Functions.makeQuery("select count(bookID) from reservation");
                         int bookID = (int)id.SelectCommand.ExecuteScalar() + 1;
                         Functions.makeQuery("insert into reservation values (" + "'" + bookID + "'" + "," + "'" + flightidinput.Text + "'" + "," + "'" + Program.primKey + "'" + "," + "'" + portinput.Text + "')");
@@ -89,16 +92,19 @@ namespace myProject
                 }
             }
             else
+            {
                 MessageBox.Show("Please fill in all the fields");
+            }
+
+
+
+
+            loadToFlightData();
+            loadToPassengerData();
         }
 
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-            userMain userMain = new userMain();
-            userMain.Show();
-        }
+
 
         private void bookbt_Click(object sender, EventArgs e)
         {

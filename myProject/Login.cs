@@ -106,11 +106,10 @@ namespace myProject
             {
                 if (row[0].ToString() == ssn && row[1].ToString() == pass)
                 {
-                    MessageBox.Show("i have found this ..!");
+                    MessageBox.Show("i have found this acoount in admins ..!");
                     return true;
                 }
             }
-            MessageBox.Show("i don't found this ..!");
 
             return false;
         }
@@ -121,12 +120,11 @@ namespace myProject
             {
                 if (row[0].ToString() == username && row[1].ToString() == pass)
                 {
-                    MessageBox.Show("i have found this ..!");
+                    MessageBox.Show("i have found this account in customers ..!");
 
                     return true;
                 }
             }
-            MessageBox.Show("i don't found this ..!");
 
             return false;
         }

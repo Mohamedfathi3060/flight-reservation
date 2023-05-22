@@ -35,7 +35,6 @@
             label2 = new Label();
             textBoxpass = new TextBox();
             textBoxusername = new TextBox();
-            label1 = new Label();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -48,6 +47,7 @@
             textage = new NumericUpDown();
             label6 = new Label();
             label7 = new Label();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -119,20 +119,6 @@
             textBoxusername.Name = "textBoxusername";
             textBoxusername.Size = new Size(310, 27);
             textBoxusername.TabIndex = 12;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Teal;
-            label1.Location = new Point(303, 50);
-            label1.Name = "label1";
-            label1.Size = new Size(439, 39);
-            label1.TabIndex = 11;
-            label1.Text = "Reservation Flight System";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
             // 
             // panel1
             // 
@@ -258,12 +244,26 @@
             label7.TabIndex = 26;
             label7.Text = "Gender";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Bahnschrift Condensed", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Teal;
+            label1.Location = new Point(560, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(551, 72);
+            label1.TabIndex = 83;
+            label1.Text = "Reservation Flight System";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1902, 1033);
+            Controls.Add(label1);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(textBoxfname);
@@ -279,7 +279,6 @@
             Controls.Add(label2);
             Controls.Add(textBoxpass);
             Controls.Add(textBoxusername);
-            Controls.Add(label1);
             Controls.Add(panel1);
             MinimumSize = new Size(1280, 720);
             Name = "Register";
@@ -301,7 +300,6 @@
         private Label label2;
         private TextBox textBoxpass;
         private TextBox textBoxusername;
-        private Label label1;
         private Panel panel1;
         private PictureBox pictureBox1;
         private Label label5;
@@ -314,5 +312,6 @@
         private Label label6;
         private Label label7;
         private PictureBox pictureBox2;
+        private Label label1;
     }
 }

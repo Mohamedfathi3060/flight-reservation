@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
-            label1 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label2 = new Label();
             label4 = new Label();
             btlogin = new Button();
             linkLabel1 = new LinkLabel();
+            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -63,19 +63,6 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Teal;
-            label1.Location = new Point(417, 34);
-            label1.Name = "label1";
-            label1.Size = new Size(439, 39);
-            label1.TabIndex = 1;
-            label1.Text = "Reservation Flight System";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox1
             // 
@@ -145,21 +132,34 @@
             linkLabel1.Text = "Register";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.White;
+            label3.Font = new Font("Bahnschrift Condensed", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.Teal;
+            label3.Location = new Point(529, 34);
+            label3.Name = "label3";
+            label3.Size = new Size(551, 72);
+            label3.TabIndex = 83;
+            label3.Text = "Reservation Flight System";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1900, 981);
+            Controls.Add(label3);
             Controls.Add(linkLabel1);
             Controls.Add(btlogin);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(label1);
             Controls.Add(panel1);
-            MinimumSize = new Size(1918, 1028);
+            MinimumSize = new Size(1280, 720);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
@@ -172,7 +172,6 @@
         #endregion
 
         private Panel panel1;
-        private Label label1;
         private PictureBox pictureBox1;
         private TextBox textBox1;
         private TextBox textBox2;
@@ -180,5 +179,6 @@
         private Label label4;
         private Button btlogin;
         private LinkLabel linkLabel1;
+        private Label label3;
     }
 }
